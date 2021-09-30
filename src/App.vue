@@ -6,9 +6,10 @@
       </div>
       <div class="teams-manager__content">
         <TeamsList :teams="teams" :activeTeamId="activeTeamId" :editingTeamId="editingTeamId"
-                   :editinPlayedId="editingPlayerId"
+                   :editingPlayerId="editingPlayerId"
                    v-on:openItem="onOpenItem" v-on:deleteTeam="onDeleteTeam" v-on:deletePlayer="onDeletePlayer"
-                   v-on:setEditEnable="onSetEditEnable"/>
+                   v-on:setEditEnable="onSetEditEnable" v-on:setEditDisable="onSetEditDisable"
+                   v-on:updateItem="onUpdateItem" v-on:addTeam="onAddTeam" v-on:addPlayer="onAddPlayer"/>
       </div>
     </div>
   </div>
@@ -40,6 +41,10 @@ export default {
       'deleteTeam',
       'deletePlayer',
       'setEditEnable',
+      'setEditDisable',
+      'updateItem',
+      'addTeam',
+      'addPlayer',
     ]),
     onOpenItem: function (id) {
       this.openItem(id);
@@ -53,6 +58,18 @@ export default {
     onSetEditEnable: function (params) {
       this.setEditEnable(params);
     },
+    onSetEditDisable: function () {
+      this.setEditDisable();
+    },
+    onUpdateItem: function (params) {
+      this.updateItem(params);
+    },
+    onAddTeam: function (name) {
+      this.addTeam(name);
+    },
+    onAddPlayer: function (params) {
+      this.addPlayer(params);
+    }
   }
 };
 </script>
@@ -74,8 +91,11 @@ export default {
   --main-grey-border: #E3E3E3;
 
   --main-green: #38CB89;
-  --main-green-light: #E5F6EF;
+  --main-green-light: #A5E1BF;
   --main-green-pale: #F5FCF9;
+
+  --main-red: #D83232;
+  --main-red-light: #FC9595;
 
   --main-blue-dark: #5B7FFF;
   --main-blue: #E1ECFF;
@@ -107,6 +127,7 @@ body {
     left: 0;
     height: 100vh;
     width: 50%;
+    z-index: -1;
     background-color: #00004b;
 
     &:after {
