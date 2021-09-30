@@ -15,16 +15,58 @@ export default new Vuex.Store({
                 roster: [
                     {
                         id: 1,
-                        name: 'Benzema',
+                        name: 'Karim Benzema',
+                        position: 'FWD',
+                        age: '33',
                     },
                     {
                         id: 2,
-                        name: 'Bale',
+                        name: 'Gareth Bale',
+                        position: 'FWD',
+                        age: '32',
                     },
                     {
                         id: 3,
-                        name: 'Vinicius Jr',
-                    }
+                        name: 'Vinícius Júnior',
+                        position: 'FWD',
+                        age: '21',
+                    },
+                    {
+                        id: '4',
+                        name: 'Luka Modrić ',
+                        position: 'MDF',
+                        age: '36',
+                    },
+                    {
+                        id: '5',
+                        name: 'Toni Kroos',
+                        position: 'MDF',
+                        age: '31',
+                    },
+                    {
+                        id: '6',
+                        name: 'Federico Valverde',
+                        position: 'MFD',
+                        age: '23',
+                    },
+                    {
+                        id: '7',
+                        name: 'Marcelo',
+                        position: 'LFD',
+                        age: '33',
+                    },
+                    {
+                        id: '8',
+                        name: 'Nacho',
+                        position: 'MDF',
+                        age: '31',
+                    },
+                    {
+                        id: '9',
+                        name: 'Thibaut Courtois',
+                        position: 'GK',
+                        age: '29',
+                    },
                 ]
             },
             {
@@ -32,17 +74,29 @@ export default new Vuex.Store({
                 name: 'PSG',
                 roster: [
                     {
-                        id: 1,
-                        name: 'Benzema',
+                        id: '1',
+                        name: 'Kylian Mbappé',
+                        position: 'FWD',
+                        age: '22',
                     },
                     {
-                        id: 2,
-                        name: 'Bale',
+                        id: '2',
+                        name: 'Lionel Messi',
+                        position: 'FWD',
+                        age: '34',
                     },
                     {
-                        id: 3,
-                        name: 'Vinicius Jr',
-                    }
+                        id: '3',
+                        name: 'Neymar',
+                        position: 'FWD',
+                        age: '29',
+                    },
+                    {
+                        id: '4',
+                        name: 'Keylor Navas',
+                        position: 'GK',
+                        age: '34',
+                    },
                 ]
             },
             {
@@ -50,17 +104,23 @@ export default new Vuex.Store({
                 name: 'Manchester City',
                 roster: [
                     {
-                        id: 1,
-                        name: 'Benzema',
+                        id: '1',
+                        name: 'Ederson',
+                        position: 'GK',
+                        age: '28',
                     },
                     {
-                        id: 2,
-                        name: 'Bale',
+                        id: '2',
+                        name: 'Phil Foden',
+                        position: 'MDF',
+                        age: '21',
                     },
                     {
-                        id: 3,
-                        name: 'Vinicius Jr',
-                    }
+                        id: '3',
+                        name: 'Kevin De Bruyne',
+                        position: 'MDF',
+                        age: '30',
+                    },
                 ]
             },
         ],

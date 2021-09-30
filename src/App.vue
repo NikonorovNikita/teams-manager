@@ -80,10 +80,6 @@ export default {
   --main-black: #323B4B;
   --main-black-dark: #000000;
 
-  --main-text-dark: #4E5D78;
-  --main-text: #8A94A6;
-  --main-text-light: #B0B7C3;
-
   --main-grey-middle: #C1C7D0;
   --main-grey: #F3F3F3;
   --main-grey-light: #FAFBFC;
@@ -92,7 +88,6 @@ export default {
 
   --main-green: #38CB89;
   --main-green-light: #A5E1BF;
-  --main-green-pale: #F5FCF9;
 
   --main-red: #D83232;
   --main-red-light: #FC9595;

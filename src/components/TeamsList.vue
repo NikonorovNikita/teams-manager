@@ -104,7 +104,7 @@
       </div>
       <div class="add add--team">
         <div class="add__field">
-          <input type="text" placeholder="New team">
+          <input type="text" placeholder="Add team">
         </div>
         <div class="add__actions">
           <div class="actions">
@@ -164,7 +164,6 @@ export default {
       }
     },
     deleteTeam: function (id) {
-      console.log(id);
       this.$emit('deleteTeam', id);
     },
     deletePlayer: function (playerId, teamId) {
@@ -206,7 +205,6 @@ export default {
       this.$emit('setEditDisable');
     },
     updateItem: function (type, event, teamId, playerId) {
-      console.log(event);
       switch (type) {
         case 'team': {
           let newTeamName = event.target.closest('.team__header').querySelector('.team__header-title > input').value;
@@ -293,6 +291,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding-left: 15px;
 
     &-title {
       & > h1 {
@@ -614,10 +613,6 @@ export default {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-  }
-
-  &:hover {
-    border-color: var(--main-grey-border);
   }
 
   * + & {
