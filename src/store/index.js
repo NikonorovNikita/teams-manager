@@ -262,7 +262,11 @@ export default new Vuex.Store({
             }
             arrTeams.find((team, index) => {
                 if (team.id === params.teamId) {
-                    newPlayer.id = team.roster.reduce((prev, current) => prev.id > current.id ? prev : current, {}).id + 1;
+                    if (team.roster.length > 0) {
+                        newPlayer.id = team.roster.reduce((prev, current) => prev.id > current.id ? prev : current, {}).id + 1;
+                    } else {
+                        newPlayer.id = 1;
+                    }
                     arrTeams[index].roster.push(newPlayer);
                 }
             });
